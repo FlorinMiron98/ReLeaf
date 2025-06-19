@@ -27,6 +27,8 @@ html {
   --color-white: #f5f5f5;
   --color-black: #151515;
 
+  --color-secondary-light: #60d797;
+
   --font-primary: "Marcellus", serif;
   --font-secondary: "Mulish", sans-serif;
 }
