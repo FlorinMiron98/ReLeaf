@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-md py-3 py-md-5 fixed-top" data-bs-theme='dark'>
+    <div class="container">
+        <a class="navbar-brand text-white" href="#">ReLeaf</a>
+        <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+                <a class="nav-link fs-5 {% if request.resolver_match.url_name == 'home' %}active{% endif %}" {% if request.resolver_match.url_name == 'home' %}aria-current="page"{% endif %} href="{% url 'home' %}">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link fs-5 {% if request.resolver_match.url_name == 'about' %}active{% endif %}" {% if request.resolver_match.url_name == 'about' %}aria-current="page"{% endif %} href="{% url 'about' %}">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link fs-5" href="#">Blog</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link fs-5" href="#">Cart</a>
+            </li>
+        </ul>
+        </div>
+    </div>
+</nav>
