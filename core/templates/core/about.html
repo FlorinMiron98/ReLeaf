@@ -10,6 +10,24 @@
 <!-- prettier-ignore -->
 {% block content %}
 <header class="min-vh-100" id="about-header">
-  <div class="container">{% include "includes/navbar.html" %}</div>
+  {% include "includes/navbar.html" %}
+  <div class="content-wrapper container mt-3">
+    <h1 class="fw-bold display-5 w-75">Our mission is to help Earth breathe again</h1>
+    <p class="mt-3">At ReLeaf, we believe that planting trees is one of the simplest and most powerful ways to combat climate change and restore the environment. Our mission is to reforest degraded land, support biodiversity, and create healthier communities</p>
+    <section class="grid-images">
+      <div class="rounded-3 overflow-hidden">
+        <img class="w-100 h-100 object-fit-cover" src="{% static 'core/images/tree-hugging.jpg' %}" alt="">
+      </div>
+      <div class="rounded-3 overflow-hidden">
+        <img class="w-100 h-100 object-fit-cover" src="{% static 'core/images/planting-your-seedling.jpg' %}" alt="">
+      </div>
+      <div class="rounded-3 overflow-hidden">
+        <img class="w-100 h-100 object-fit-cover" src="{% static 'core/images/many-hands-one-tree.jpg' %}" alt="">
+      </div>
+      <div class="rounded-3 overflow-hidden">
+        <img class="w-100 h-100 object-fit-cover" src="{% static 'core/images/forest-edge.jpg' %}" alt="">
+      </div>
+    </section>
+  </div>
 </header>
 {% endblock %}
