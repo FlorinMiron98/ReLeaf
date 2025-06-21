@@ -13,7 +13,7 @@
                 <a class="nav-link fs-5 {% if request.resolver_match.url_name == 'about' %}active{% endif %}" {% if request.resolver_match.url_name == 'about' %}aria-current="page"{% endif %} href="{% url 'about' %}">About</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link fs-5" href="#">Blog</a>
+                <a class="nav-link fs-5 {% if request.resolver_match.url_name == 'all-posts' %}active{% endif %}" {% if request.resolver_match.url_name == 'all-posts' %}aria-current="page"{% endif %} href="{% url 'all-posts' %}">Blog</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link fs-5" href="#">Cart</a>
