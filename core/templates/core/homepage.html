@@ -1,12 +1,30 @@
+<!-- prettier-ignore -->
 {% extends "base.html" %}
 {% load static %}
 
+<!-- prettier-ignore -->
 {% block app_styles %}
-<link rel="stylesheet" href="{% static 'core/core.css' %}">
+<link rel="stylesheet" href="{% static 'core/core.css' %}" />
 {% endblock %}
 
+<!-- prettier-ignore -->
 {% block content %}
-<header class="min-vh-100">
-    <div class="container"></div>
+<header class="min-vh-100 d-flex align-items-center" id="home-header">
+  {% include "includes/navbar.html" %}
+  <div class="container h-100">
+    <h1 class="text-center fw-bold display-5">
+      One tree at a time, we're healing the Earth.
+    </h1>
+    <p class="text-center">
+      Every tree we plant is a step toward a healthier planet, cleaner air, and
+      a brighter future for generations to come. Our charity is committed to
+      restoring forests, fighting climate change, and supporting biodiversity
+      through meaningful, community-driven reforestation projects.
+    </p>
+    <div class="cta-buttons d-flex justify-content-center mt-4">
+        <a href="" class="btn btn-primary py-3 px-4 fw-bold rounded-5">Donate now</a>
+        <a href="{% url 'all-posts' %}" class="btn btn-primary py-3 px-4 fw-bold rounded-5">Blog</a>
+    </div>
+  </div>
 </header>
 {% endblock %}
