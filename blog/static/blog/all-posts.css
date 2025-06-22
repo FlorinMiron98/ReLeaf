@@ -1,3 +1,26 @@
 #all-posts-header {
   background-color: var(--color-primary);
 }
+
+#all-posts-header .navbar {
+  background-color: var(--color-primary);
+}
+
+.container .post-link {
+  text-decoration: none;
+  transition: transform 0.1s linear;
+}
+
+.container .post-link:hover {
+  transform: scale(1.05);
+}
+
+.container .post-link:active {
+  transform: scale(1.025);
+}
+
+.container .card .card-img-top {
+  /* 215px / 16 */
+  height: 13.4375rem;
+  object-fit: cover;
+}
