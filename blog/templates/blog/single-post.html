@@ -1,0 +1,32 @@
+{% extends "base.html" %} {% load static %}
+
+<!-- prettier-ignore -->
+{% block app_styles %}
+<link rel="stylesheet" href="{% static 'blog/single-post.css' %}" />
+{% endblock %}
+
+<!-- prettier-ignore -->
+{% block content %}
+<header class="min-vh-100" id="single-post-header">
+  {% include "includes/navbar.html" %}
+  <div class="content-wrapper container mt-3">
+    <div class="row g-3 g-md-5">
+      <div class="col-12 col-md-6">
+        <div class="image-container overflow-hidden">
+          <img
+            class="w-100 object-fit-cover"
+            src="{{ post.image.url }}"
+            alt="{{ post.image_alt }}"
+          />
+        </div>
+      </div>
+      <div class="col-12 col-md-6 d-flex flex-column justify-content-center">
+        <h1 class="display-5">{{ post.title }}</h1>
+        <p>{{ post.date }}</p>
+        <p class="post-author mt-4 fw-bold">Posted by {{ post.author }}</p>
+      </div>
+      <p class="col-12">{{ post.comment }}</p>
+    </div>
+  </div>
+</header>
+{% endblock %}
