@@ -1,0 +1,20 @@
+#single-post-header {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("./images/tall-trees.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#single-post-header .navbar {
+  background-color: var(--color-primary);
+}
+
+.image-container {
+  border-radius: 50%;
+}
+
+.container .post-author {
+  color: var(--color-secondary);
+  font-style: italic;
+}
