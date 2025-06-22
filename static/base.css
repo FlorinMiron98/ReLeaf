@@ -63,6 +63,7 @@ h6 {
 
 .container .navbar-nav {
   gap: 2rem;
+  border-bottom: 1px solid transparent;
 }
 
 .container .navbar-nav .nav-link {
