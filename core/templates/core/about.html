@@ -4,12 +4,16 @@
 
 <!-- prettier-ignore -->
 {% block app_styles %}
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+/>
 <link rel="stylesheet" href="{% static 'core/core.css' %}" />
 {% endblock %}
 
 <!-- prettier-ignore -->
 {% block content %}
-<header class="min-vh-100" id="about-header">
+<header class="min-vh-100 d-flex flex-column" id="about-header">
   {% include "includes/navbar.html" %}
   <div class="content-wrapper container mt-3">
     <h1 class="fw-bold display-5 w-75">
