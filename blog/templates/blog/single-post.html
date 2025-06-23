@@ -21,7 +21,7 @@
         </div>
       </div>
       <div class="col-12 col-md-6 d-flex flex-column justify-content-center">
-        <h1 class="display-5">{{ post.title }}</h1>
+        <h1 class="display-5 fw-bold">{{ post.title }}</h1>
         <p class="mb-0">{{ post.date }}</p>
         <p class="post-author mt-1 mt-md-4 fw-bold">
           Posted by {{ post.author }}
@@ -31,4 +31,11 @@
     </div>
   </div>
 </header>
+<main class="mt-5">
+  <section id="comments">
+    <div class="container">
+      <h1>Comments</h1>
+    </div>
+  </section>
+</main>
 {% endblock %}
