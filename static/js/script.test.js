@@ -16,4 +16,10 @@ describe("setDynamicPadding", () => {
       height: 50,
     }));
   });
+
+  test("should set padding on the header based on navbar height", () => {
+    setDynamicPadding(navbar, contentWrapper, header);
+    expect(header.style.paddingTop).toBe("50px");
+    expect(header.style.paddingBottom).toBe("50px");
+  });
 });
