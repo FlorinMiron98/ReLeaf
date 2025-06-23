@@ -1,0 +1,31 @@
+{
+  "name": "re_leaf",
+  "version": "1.0.0",
+  "description": "1. Allow users to easily and securely donate money to support tree-planting efforts.\r 2. Clearly communicate the organization’s mission, impact, and values to gain user confidence.\r 3. Enable user accounts and interactions to encourage engagement and a sense of belonging.\r 4. Design a responsive and user-friendly website that works well on all devices.\r 5. Give admins tools to create and manage blog content without editing code.\r 6. Require users to log in before donating to ensure secure and trackable contributions.\r ### User Stories\r 1. As a potential donor, I want to create an account and log in so that I can securely access my profile and donate to tree-planting projects.\r 2. As a visitor to the website, I want to read about the organization and its mission, so that I can understand who is behind the project and feel confident about donating.\r 3. As a visitor or user, I want to read blog posts about the charity’s work and updates, and as a logged-in user, I want to leave comments on posts, so that I can stay informed and engage with the organization.\r 4. As a logged-in user, I want to see suggested donation options, but be able to enter a custom amount, so that I can donate whatever feels right to me.\r 5. As a visitor using any device (phone, tablet, or desktop), I want to view and use the website comfortably, so that I can read content, donate, and navigate easily no matter what screen I'm on.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FlorinMiron98/ReLeaf.git"
+  },
+  "keywords": [
+    "django",
+    "javascript",
+    "vitest",
+    "donation",
+    "tree",
+    "planting"
+  ],
+  "author": "Florin Miron",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FlorinMiron98/ReLeaf/issues"
+  },
+  "homepage": "https://github.com/FlorinMiron98/ReLeaf#readme",
+  "devDependencies": {
+    "jsdom": "^26.1.0",
+    "vitest": "^3.2.4"
+  }
+}
