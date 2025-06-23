@@ -15,4 +15,15 @@ describe("Set amount", () => {
     setDonationAmount();
     expect(amount.textContent).toBe("£50");
   });
+
+  test("updates the amount text when input changes", () => {
+    const amountRange = document.getElementById("amount-range");
+    const amount = document.querySelector(".amount");
+
+    // Change value
+    amountRange.value = "75";
+    amountRange.dispatchEvent(new Event("input"));
+
+    expect(amount.textContent).toBe("£75");
+  });
 });
