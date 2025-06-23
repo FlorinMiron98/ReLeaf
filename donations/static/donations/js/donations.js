@@ -6,6 +6,10 @@ const setDonationAmount = function () {
     amount.textContent = `£${amountRange.value}`;
   }
 
+  amountRange.addEventListener("input", () => {
+    setAmount();
+  });
+
   setAmount();
 };
 
