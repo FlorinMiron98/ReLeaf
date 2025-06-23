@@ -13,4 +13,6 @@ const setDonationAmount = function () {
   setAmount();
 };
 
+setDonationAmount();
+
 export default setDonationAmount;
