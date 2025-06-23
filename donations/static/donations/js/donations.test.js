@@ -21,9 +21,9 @@ describe("Set amount", () => {
     const amount = document.querySelector(".amount");
 
     // Change value
+    setDonationAmount();
     amountRange.value = "75";
     amountRange.dispatchEvent(new Event("input"));
-
     expect(amount.textContent).toBe("£75");
   });
 });
