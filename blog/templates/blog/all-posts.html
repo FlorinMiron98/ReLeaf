@@ -11,13 +11,16 @@
 {% block content %}
 <header class="min-vh-100" id="all-posts-header">
   {% include "includes/navbar.html" %}
-  <div class="content-wrapper container">
+  <div class="content-wrapper container mt-3">
     <h1 class="fw-bold display-5">The Green Journal</h1>
     <div class="container text-center mt-4">
       <div class="row g-4">
         {% for post in all_posts %}
         <div class="col-12 col-sm-6 col-md-4">
-          <a href="{% url 'single-post' post.slug %}" class="post-link card h-100">
+          <a
+            href="{% url 'single-post' post.slug %}"
+            class="post-link card h-100"
+          >
             <img
               src="{{ post.image.url }}"
               class="card-img-top"
@@ -25,14 +28,12 @@
             />
             <div class="card-body">
               <h5 class="card-title">{{ post.title }}</h5>
-              <p class="card-text">
-                {{ post.excerpt }}
-              </p>
+              <p class="card-text">{{ post.excerpt }}</p>
             </div>
           </a>
         </div>
-        {% endfor %}
-        {% comment %} <div class="col-12 col-sm-6 col-md-4">
+        {% endfor %} {% comment %}
+        <div class="col-12 col-sm-6 col-md-4">
           <a href="#" class="post-link card h-100">
             <img
               src="{% static 'blog/images/trees-landscape.jpg' %}"
@@ -42,11 +43,13 @@
             <div class="card-body">
               <h5 class="card-title">Why Trees Matter More Than Ever</h5>
               <p class="card-text">
-                As the planet faces rising temperatures and biodiversity loss, trees are one of our most powerful allies.
+                As the planet faces rising temperatures and biodiversity loss,
+                trees are one of our most powerful allies.
               </p>
             </div>
           </a>
-        </div> {% endcomment %}
+        </div>
+        {% endcomment %}
       </div>
     </div>
   </div>
