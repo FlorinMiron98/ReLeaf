@@ -45,6 +45,14 @@
   color: var(--color-primary);
 }
 
+.stats .col-12 div {
+  gap: 0.5rem;
+}
+
+.stats .col-12 div p + p {
+  color: var(--color-secondary);
+}
+
 .grid-images {
   display: grid;
   grid-template-areas:
