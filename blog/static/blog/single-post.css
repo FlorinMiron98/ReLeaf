@@ -18,3 +18,57 @@
   color: var(--color-secondary);
   font-style: italic;
 }
+
+main h1 {
+  color: var(--color-primary);
+}
+
+.comments-container {
+  color: var(--color-black);
+}
+
+.comment {
+  box-shadow: 0 2px 8px 2px rgba(138, 138, 138, 0.6);
+}
+
+.comment .comment__user {
+  color: var(--color-primary);
+}
+
+.comment .comment__user .comment__user--date {
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.comment .comment__buttons {
+  gap: 0.8rem;
+}
+
+.comment .comment__buttons .comment__buttons--delete,
+.comment .comment__buttons .comment__buttons--edit {
+  min-width: 6rem;
+}
+
+.comment .comment__buttons .comment__buttons--delete {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
+
+.comment .comment__buttons .comment__buttons--edit {
+  border: 2px solid var(--color-secondary);
+  color: var(--color-secondary);
+}
+
+#comments-section .container {
+  color: var(--color-primary);
+}
+
+/* ============================== */
+/* Media Queries */
+/* ============================== */
+@media only screen and (max-width: 576px) {
+  .comment .comment__buttons .comment__buttons--delete,
+  .comment .comment__buttons .comment__buttons--edit {
+    min-width: 50%;
+  }
+}
