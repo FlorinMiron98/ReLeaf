@@ -6,6 +6,7 @@ export default defineConfig({
     include: [
       "donations/static/donations/js/**/*.test.js",
       "static/js/**/*.test.js",
+      "core/static/core/js/**/*.test.js",
     ],
   },
 });
