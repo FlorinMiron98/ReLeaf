@@ -1,7 +1,52 @@
 #register-header {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
     url("./images/two-brown-trees.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+#register-header form {
+  width: 70%;
+}
+
+#register-header form .form-label {
+  color: var(--color-secondary-light);
+}
+
+#register-header form input {
+  padding: 0.75rem;
+  border-radius: 1rem;
+  background-color: var(--color-gray-transparent);
+  caret-color: var(--color-gray-light);
+  color: var(--color-white);
+}
+
+#register-header form input::placeholder {
+  color: var(--color-gray-light);
+}
+
+#register-header form button {
+  background-color: var(--color-secondary);
+  border: none;
+}
+
+#register-header form button:active,
+#register-header form button:hover {
+  background-color: var(--color-secondary-light);
+}
+
+.errorlist {
+  list-style: none;
+  font-weight: bold;
+  color: var(--color-red);
+}
+
+/* ===================== */
+/* Media Queries */
+/* ===================== */
+@media only screen and (max-width: 576px) {
+  #register-header form {
+    width: 100%;
+  }
 }
