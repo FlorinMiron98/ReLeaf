@@ -15,8 +15,17 @@
             <li class="nav-item">
                 <a class="nav-link fs-5 {% if request.resolver_match.url_name == 'all-posts' %}active{% endif %}" {% if request.resolver_match.url_name == 'all-posts' %}aria-current="page"{% endif %} href="{% url 'all-posts' %}">Blog</a>
             </li>
-            <li class="nav-item donations-nav-link">
+            <li class="nav-item">
                 <a class="nav-link fs-5 {% if request.resolver_match.url_name == 'donations' %}active{% endif %}" {% if request.resolver_match.url_name == 'donations' %}aria-current="page"{% endif %} href="{% url 'donations' %}">Donations</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle d-flex align-items-center h-100" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Login/Register/User Icon">
+                    <i class="fa-regular fa-circle-user fs-4"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item fw-bold" href="{% url 'register' %}">Register</a></li>
+                    <li><a class="dropdown-item fw-bold" href="#">Login</a></li>
+                </ul>
             </li>
         </ul>
         </div>
