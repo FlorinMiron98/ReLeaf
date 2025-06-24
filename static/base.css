@@ -74,3 +74,19 @@ h6 {
 .container .navbar-nav .nav-link.active {
   border-bottom: 1px solid white;
 }
+
+.container .navbar-nav .dropdown-toggle {
+  color: var(--color-secondary);
+}
+
+.container .navbar-nav .dropdown-toggle:hover {
+  border-bottom: none;
+}
+
+.container .navbar-nav .dropdown-menu {
+  background-color: var(--color-secondary);
+}
+
+.container .navbar-nav .dropdown-menu .dropdown-item:hover {
+  background-color: var(--color-primary);
+}
