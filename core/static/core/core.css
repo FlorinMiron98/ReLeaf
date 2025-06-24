@@ -53,6 +53,10 @@
   color: var(--color-secondary);
 }
 
+main h1 {
+  color: var(--color-primary);
+}
+
 .grid-images {
   display: grid;
   grid-template-areas:
@@ -75,6 +79,10 @@
 }
 .grid-images div:nth-of-type(4) {
   grid-area: image4;
+}
+
+.our-mission__content {
+  color: var(--color-black);
 }
 
 /* ================================== */
