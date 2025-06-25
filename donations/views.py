@@ -44,3 +44,9 @@ class CreateCheckoutSessionView(View):
             })
         except Exception as e:
             return JsonResponse({'error': str(e), 'amount_value': amount}, status=400)
+
+class DonationSuccessView(TemplateView):
+    template_name = 'donations/donation-success.html'
+
+class DonationFailView(TemplateView):
+    template_name = 'donations/donation-fail.html'
