@@ -23,8 +23,13 @@
                     <i class="fa-regular fa-circle-user fs-4"></i>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end">
-                    <li><a class="dropdown-item fw-bold" href="{% url 'register' %}">Register</a></li>
-                    <li><a class="dropdown-item fw-bold" href="#">Login</a></li>
+                    {% if user.is_authenticated %}
+                        <li><a class="dropdown-item fw-bold" href="{% url 'home' %}">{{ user.username }}</a></li>
+                        <li><a class="dropdown-item fw-bold" href="{% url 'logout' %}">Logout</a></li>
+                    {% else %}
+                        <li><a class="dropdown-item fw-bold" href="{% url 'register' %}">Register</a></li>
+                        <li><a class="dropdown-item fw-bold" href="{% url 'login' %}">Login</a></li>
+                    {% endif %}
                 </ul>
             </li>
         </ul>
