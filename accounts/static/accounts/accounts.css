@@ -1,4 +1,5 @@
-#register-header {
+#register-header,
+#login-header {
   background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
     url("./images/two-brown-trees.jpg");
   background-position: center;
@@ -6,15 +7,18 @@
   background-repeat: no-repeat;
 }
 
-#register-header form {
+#register-header form,
+#login-header form {
   width: 70%;
 }
 
-#register-header form .form-label {
+#register-header form .form-label,
+#login-header form .form-label {
   color: var(--color-secondary-light);
 }
 
-#register-header form input {
+#register-header form input,
+#login-header form input {
   padding: 0.75rem;
   border-radius: 1rem;
   background-color: var(--color-gray-transparent);
@@ -22,17 +26,21 @@
   color: var(--color-white);
 }
 
-#register-header form input::placeholder {
+#register-header form input::placeholder,
+#login-header form input::placeholder {
   color: var(--color-gray-light);
 }
 
-#register-header form button {
+#register-header form button,
+#login-header form button {
   background-color: var(--color-secondary);
   border: none;
 }
 
 #register-header form button:active,
-#register-header form button:hover {
+#register-header form button:hover,
+#login-header form button:active,
+#login-header form button:hover {
   background-color: var(--color-secondary-light);
 }
 
@@ -46,7 +54,8 @@
 /* Media Queries */
 /* ===================== */
 @media only screen and (max-width: 576px) {
-  #register-header form {
+  #register-header form,
+  #login-header form {
     width: 100%;
   }
 }
