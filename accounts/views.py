@@ -6,7 +6,7 @@ from django.contrib.auth import logout
 from django.contrib import messages
 from django.urls import reverse_lazy
 from django.shortcuts import redirect
-from .forms import CustomRegisterForm
+from .forms import CustomRegisterForm, CustomAuthenticationForm
 
 # Create your views here.
 
@@ -19,6 +19,17 @@ class RegisterView(FormView):
         user = form.save()
         login(self.request, user=user)
         messages.success(self.request, 'Registration successful. Welcome!')
+        return super().form_valid(form)
+
+class LoginView(FormView):
+    template_name = 'accounts/login.html'
+    form_class = CustomAuthenticationForm
+    success_url = reverse_lazy('home')
+
+    def form_valid(self, form):
+        user = form.get_user()
+        login(self.request, user=user)
+        messages.success(self.request, 'Login successful.')
         return super().form_valid(form)
 
 class LogoutView(View):
