@@ -29,6 +29,10 @@ html {
 
   --color-secondary-light: #60d797;
 
+  --color-red: #ff2727;
+  --color-gray-light: #dedede;
+  --color-gray-transparent: rgba(191, 191, 191, 0.4);
+
   --font-primary: "Marcellus", serif;
   --font-secondary: "Mulish", sans-serif;
 }
