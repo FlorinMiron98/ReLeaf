@@ -169,7 +169,7 @@
         </div>
       </div>
     </div>
-    <form action="" class="mt-5">
+    <form action="{% url 'create-checkout-session' %}" method="post" id="donation-amount-form" class="mt-5">
       <label for="amount-range" class="form-label fw-bold fs-3"
         >Choose your amount</label
       >
@@ -177,6 +177,7 @@
         type="range"
         class="form-range"
         id="amount-range"
+        name="amount"
         min="1"
         max="250"
         step="1"
@@ -195,4 +196,7 @@
 <!-- prettier-ignore -->
 {% block scripts %}
 <script src="{% static 'donations/js/donations.js' %}" type="module"></script>
+
+<script src="https://js.stripe.com/v3/"></script>
+<script src="{% static 'donations/js/checkoutSession.js' %}"></script>
 {% endblock %}

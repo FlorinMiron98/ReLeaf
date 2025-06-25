@@ -1,4 +1,6 @@
 const donationCardButtons = document.querySelectorAll(".donation-card__button");
+const donationAmountForm = document.getElementById("donation-amount-form");
+const donationAmountRange = document.getElementById("amount-range");
 
 const checkout = async function (amount) {
   try {
@@ -26,8 +28,14 @@ const checkout = async function (amount) {
 
 donationCardButtons.forEach((donationButton) => {
   donationButton.addEventListener("click", (e) => {
-    const amountStr = e.target.closest("[data-amount]").dataset.amount;
-    const amount = +`${amountStr}.00`;
+    const amount = +e.target.closest("[data-amount]").dataset.amount;
     checkout(amount);
   });
+});
+
+donationAmountForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const amount = +donationAmountRange.value;
+  checkout(amount);
 });
