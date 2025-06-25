@@ -34,5 +34,26 @@
       >
     </div>
   </div>
+
+  <!-- Form Toast -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3 text-white z-3">
+    <div id="form-toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-content d-flex p-3">
+        {% if messages %}
+            {% for message in messages %}
+              <div class="new-message">
+                {{ message }}
+              </div>
+            {% endfor %}
+        {% endif %}
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
 </header>
+{% endblock %}
+
+<!-- prettier-ignore -->
+{% block scripts %}
+<script src="{% static 'core/js/displayToast.js' %}"></script>
 {% endblock %}
