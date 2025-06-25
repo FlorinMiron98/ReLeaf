@@ -1,0 +1,49 @@
+{% extends "base.html" %} {% load static %}
+
+<!-- prettier-ignore -->
+{% block app_styles %}
+<link rel="stylesheet" href="{% static 'accounts/accounts.css' %}" />
+{% endblock %}
+
+<!-- prettier-ignore -->
+{% block content %}
+<header class="min-vh-100 d-flex align-items-center" id="login-header">
+  {% include "includes/navbar.html" %}
+  <div class="container d-flex flex-column align-items-center">
+    <h1 class="fw-bold display-5">Login</h1>
+    <form action="" method="post">
+      <!-- prettier-ignore -->
+      {% csrf_token %}
+      {{ form.non_field_errors }}
+
+      <div class="mb-3 d-flex flex-column">
+        <label
+          for="{{ form.username.id_for_label }}"
+          class="form-label fs-5 fw-bold"
+          >Username:</label
+        >
+        <!-- prettier-ignore -->
+        {{ form.username }}
+        {{ form.username.errors }}
+      </div>
+
+      <div class="mb-3 d-flex flex-column">
+        <label
+          for="{{ form.password.id_for_label }}"
+          class="form-label fs-5 fw-bold"
+          >Password:</label
+        >
+        <!-- prettier-ignore -->
+        {{ form.password }}
+        {{ form.password.errors }}
+      </div>
+
+      <div class="text-center text-sm-start mt-4">
+        <button class="btn btn-primary py-3 px-4 fw-bold rounded-5">
+          Login
+        </button>
+      </div>
+    </form>
+  </div>
+</header>
+{% endblock %}
