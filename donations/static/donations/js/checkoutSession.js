@@ -18,6 +18,12 @@ const checkout = async function (amount) {
       }),
     });
 
+    if (!response.ok) {
+      throw new Error(
+        "Something went wrong. Please restart the page and try again."
+      );
+    }
+
     const data = await response.json();
 
     if (!data.userIsAuthenticated) {
@@ -33,7 +39,8 @@ const checkout = async function (amount) {
       sessionId: data.id,
     });
   } catch (error) {
-    console.log(error);
+    loginRequiredMessage.textContent = error.message;
+    toast.show();
   }
 };
 
