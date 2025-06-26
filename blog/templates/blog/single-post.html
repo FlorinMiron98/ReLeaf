@@ -38,7 +38,7 @@
       <!-- prettier-ignore -->
       {% if has_comments %}
       {% for comment in comments %}
-      <div class="comment p-4 mb-4">
+      <div class="comment p-4 mb-4" data-comment-id="{{ comment.id }}">
         <div class="comment__user">
           <p class="comment__user--name fw-bold fs-5 mb-0">{{ comment.author }}</p>
           <p class="comment__user--date">{{ comment.date }}</p>
@@ -72,9 +72,37 @@
       <button class="comment-submit-btn btn btn-primary py-3 px-4 fw-bold rounded-5">Submit</button>
     </form>
     {% else %}
-    <p class="text-center fs-4 fw-bold mt-4">Login to leave a comment</p>
+    <p class="text-area-placeholder text-center fs-4 fw-bold my-4">Login to leave a comment</p>
     {% endif %}
-    
   </section>
 </main>
+
+<!-- Edit Comment Modal -->
+ <div class="modal fade" tabindex="-1" id="edit-comment-modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title fw-bold fs-3">Edit comment</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="" method="post">
+          {% csrf_token %}
+          <div class="mb-4">
+            <label for="edit-comment" class="form-label fw-bold">Edit your comment:</label>
+            <textarea id="edit-comment" name="new-comment" class="form-control" placeholder="Enter your new comment" minlength='10' maxlength='300' rows='8'></textarea>
+          </div>
+
+          <button type="button" class="cancel-edit-btn btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="save-edit-btn btn btn-primary">Save changes</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+<!-- prettier-ignore -->
+{% block scripts %}
+<script src="{% static 'blog/js/edit-comment.js' %}"></script>
 {% endblock %}
