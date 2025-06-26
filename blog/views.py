@@ -1,9 +1,14 @@
-from django.shortcuts import render
-from django.views.generic.edit import FormMixin 
-from django.views.generic import DetailView, ListView
+from django.shortcuts import render, get_object_or_404
 from django.urls import reverse
-from .models import Post
+from django.contrib import messages
+from django.http import JsonResponse
+from django.views.generic.edit import FormMixin
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views.generic import DetailView, ListView
+from django.views import View
+from .models import Post, Comment
 from .forms import CommentForm
+import json
 
 # Create your views here.
 
@@ -51,3 +56,28 @@ class SinglePostView(FormMixin, DetailView):
         comment.author = self.request.user
         comment.save()
         return super().form_valid(form)
+
+class CommentUpdateView(LoginRequiredMixin, View):
+    def post(self, request, pk, *args, **kwargs):
+        comment = get_object_or_404(Comment, pk=pk)
+
+        if comment.author != request.user:
+            return JsonResponse(
+                {"error": "You are not allowed to edit this comment."},
+                status=403
+            )
+        
+        data = json.loads(request.body)
+        comment_text = data.get("user_comment", "").strip()
+
+        if len(comment_text) < 10 or len(comment_text) > 300:
+            return JsonResponse(
+                {"error": "Comment must be between 10 and 300 characters"},
+                status=400
+            )
+        
+        comment.user_comment = comment_text
+        comment.save()
+
+        return JsonResponse({"user_comment": comment.user_comment})
+        
