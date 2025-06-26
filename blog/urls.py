@@ -3,5 +3,6 @@ from . import views
 
 urlpatterns = [
     path('', views.AllPostsView.as_view(), name='all-posts'),
-    path('<slug:slug>', views.SinglePostView.as_view(), name='single-post')
+    path('<slug:slug>', views.SinglePostView.as_view(), name='single-post'),
+    path('comments/<int:pk>/edit/', views.CommentUpdateView.as_view(), name='comment-update')
 ]
