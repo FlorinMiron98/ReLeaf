@@ -1,11 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Donation Fail</h1>
-</body>
-</html>
+{% extends "base.html" %} {% load static %}
+
+<!-- prettier-ignore -->
+{% block app_styles %}
+<link rel="stylesheet" href="{% static 'donations/donation-fail.css' %}" />
+{% endblock %}
+
+<!-- prettier-ignore -->
+{% block content %}
+<header class="min-vh-100 d-flex align-items-center" id="donation-fail-header">
+  {% include "includes/navbar.html" %}
+  <div class="container">
+    <h1 class="text-center display-5 fw-bold">Something Went Wrong</h1>
+    <p class="text-center">
+      We weren't able to process your donation. Please don't worry - no payment
+      was taken. You can try again. Every tree counts, and we appreciate your
+      support!
+    </p>
+    <div class="text-center mt-4">
+      <a
+        href="{% url 'donations' %}"
+        class="return-to-donations-btn btn btn-primary py-3 px-4 fw-bold rounded-5"
+        >Return to Donations</a
+      >
+    </div>
+  </div>
+</header>
+{% endblock %}
