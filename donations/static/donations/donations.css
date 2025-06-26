@@ -10,29 +10,29 @@
   background-color: var(--color-white);
 }
 
-.donation-card__image img {
+.donation-card .donation-card__image img {
   width: 50%;
   object-fit: cover;
 }
 
-.donation-card__amount {
+.donation-card .donation-card__amount {
   color: var(--color-primary);
 }
 
-.donation-card__description {
+.donation-card .donation-card__description {
   color: var(--color-black);
 }
 
-.donation-card__button,
-.donation-form__button {
+.donation-card .donation-card__button,
+#donation-amount-form .donation-form__button {
   background-color: var(--color-secondary);
   border: none;
 }
 
-.donation-form__button:active,
-.donation-form__button:hover,
-.donation-card__button:active,
-.donation-card__button:hover {
+#donation-amount-form .donation-form__button:active,
+#donation-amount-form .donation-form__button:hover,
+.donation-card .donation-card__button:active,
+.donation-card .donation-card__button:hover {
   background-color: var(--color-secondary-light);
 }
 
