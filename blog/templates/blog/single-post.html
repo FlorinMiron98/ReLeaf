@@ -27,7 +27,7 @@
           Posted by {{ post.author }}
         </p>
       </div>
-      <p class="col-12">{{ post.comment }}</p>
+      <p class="col-12">{{ post.admin_comment }}</p>
     </div>
   </div>
 </header>
@@ -35,23 +35,42 @@
   <section id="comments-section">
     <h1 class="text-center">Comments</h1>
     <div class="comments-container mt-4">
-      <div class="comment p-4">
+      <!-- prettier-ignore -->
+      {% for comment in comments %}
+      <div class="comment p-4 mb-4">
         <div class="comment__user">
-          <p class="comment__user--name fw-bold fs-5 mb-0">FLORIN</p>
-          <p class="comment__user--date">22 June 2025</p>
+          <p class="comment__user--name fw-bold fs-5 mb-0">{{ comment.author }}</p>
+          <p class="comment__user--date">{{ comment.date }}</p>
         </div>
         <p class="comment__content mb-4">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
-          totam unde dolorem deserunt odio suscipit exercitationem earum sint
-          ipsam? Soluta ex, molestias voluptates placeat at similique vitae
-          deserunt laborum assumenda.
+          {{ comment.user_comment }}
         </p>
+        {% if comment.author == user %}
         <div class="comment__buttons d-flex justify-content-sm-end">
           <button class="comment__buttons--edit btn">Edit</button>
           <button class="comment__buttons--delete btn">Delete</button>
         </div>
+        {% endif %}
       </div>
+      {% endfor %}
     </div>
+
+    {% if user.is_authenticated %}
+    <form action="" method="post" class="my-4">
+      {% csrf_token %}
+      {{ form.non_field_errors }}
+
+      <div class="mb-3 d-flex flex-column">
+        <label for="form.user_comment.id_for_label" class="form-label fs-5 fw-bold">Your comment:</label>
+        {{ form.user_comment }}
+        {{ form.user_comment.errors }}
+      </div>
+      <button class="comment-submit-btn btn btn-primary py-3 px-4 fw-bold rounded-5">Submit</button>
+    </form>
+    {% else %}
+    <p class="text-center fs-4 fw-bold mt-4">Login to leave a comment</p>
+    {% endif %}
+    
   </section>
 </main>
 {% endblock %}
