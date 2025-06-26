@@ -92,6 +92,41 @@ main form .comment-submit-btn:active {
   background-color: var(--color-secondary-light);
 }
 
+main .text-area-placeholder {
+  color: var(--color-primary);
+}
+
+/* ==================================== */
+/* Edit Comment Modal */
+/* ==================================== */
+#edit-comment-modal label {
+  color: var(--color-primary);
+}
+
+#edit-comment-modal textarea {
+  resize: none;
+}
+
+#edit-comment-modal .cancel-edit-btn {
+  background-color: var(--color-red);
+  border: none;
+}
+
+#edit-comment-modal .cancel-edit-btn:active,
+#edit-comment-modal .cancel-edit-btn:hover {
+  background-color: var(--color-red-light);
+}
+
+#edit-comment-modal .save-edit-btn {
+  background-color: var(--color-secondary);
+  border: none;
+}
+
+#edit-comment-modal .save-edit-btn:active,
+#edit-comment-modal .save-edit-btn:hover {
+  background-color: var(--color-secondary-light);
+}
+
 /* ============================== */
 /* Media Queries */
 /* ============================== */
