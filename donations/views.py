@@ -56,7 +56,8 @@ class CreateCheckoutSessionView(View):
             )
             return JsonResponse({
                 'id': session.id,
-                'stripePublicKey': settings.STRIPE_PUBLIC_KEY
+                'stripePublicKey': settings.STRIPE_PUBLIC_KEY,
+                'userIsAuthenticated': request.user.is_authenticated
             })
         except Exception as e:
             return JsonResponse({'error': str(e), 'amount_value': amount}, status=400)
