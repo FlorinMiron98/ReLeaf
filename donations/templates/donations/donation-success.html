@@ -1,11 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Donation success</h1>
-</body>
-</html>
+{% extends "base.html" %} {% load static %}
+
+<!-- prettier-ignore -->
+{% block app_styles %}
+<link rel="stylesheet" href="{% static 'donations/donations-success.css' %}" />
+{% endblock %}
+
+<!-- prettier-ignore -->
+{% block content %}
+<header
+  class="min-vh-100 d-flex align-items-center"
+  id="donation-success-header"
+>
+  {% include "includes/navbar.html" %}
+  <div class="container">
+    <h1 class="text-center display-5 fw-bold">Thank You for Planting Hope!</h1>
+    <p class="text-center">
+      Your donation is helping to restore forests, fight climate change, and
+      support communities around the world. Together, we're growing a greener,
+      healthier planet.
+    </p>
+    <div class="text-center mt-4">
+      <a
+        href="{% url 'home' %}"
+        class="return-to-homepage-btn btn btn-primary py-3 px-4 fw-bold rounded-5"
+        >Return to Homepage</a
+      >
+    </div>
+  </div>
+</header>
+{% endblock %}
