@@ -39,3 +39,7 @@
 p .amount {
   color: var(--color-secondary);
 }
+
+#donation-toast {
+  background-color: var(--color-secondary-light);
+}
