@@ -27,6 +27,12 @@ class SinglePostView(FormMixin, DetailView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['comments'] = self.object.comments.all()
+
+        if len(context['comments']) > 0:
+            context['has_comments'] = True
+        else:
+            context['has_comments'] = False
+
         if 'form' not in context:
             context['form'] = self.get_form()
         return context
