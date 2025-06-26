@@ -2,6 +2,10 @@ const donationCardButtons = document.querySelectorAll(".donation-card__button");
 const donationAmountForm = document.getElementById("donation-amount-form");
 const donationAmountRange = document.getElementById("amount-range");
 
+const donationToast = document.getElementById("donation-toast");
+const toast = new bootstrap.Toast(donationToast);
+const loginRequiredMessage = document.querySelector(".login-required-message");
+
 const checkout = async function (amount) {
   try {
     const response = await fetch("create-checkout-session/", {
@@ -15,6 +19,13 @@ const checkout = async function (amount) {
     });
 
     const data = await response.json();
+
+    if (!data.userIsAuthenticated) {
+      loginRequiredMessage.textContent = "You must be authenticated first.";
+      toast.show();
+
+      return;
+    }
 
     const stripePublicKey = Stripe(data.stripePublicKey);
 
