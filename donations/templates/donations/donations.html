@@ -196,6 +196,23 @@
     </form>
   </div>
 </header>
+
+<!-- Donation Login Required Toast -->
+<div class="toast-container position-fixed bottom-0 end-0 p-3 text-white z-3">
+  <div
+    id="donation-toast"
+    class="toast"
+    role="alert"
+    aria-live="assertive"
+    aria-atomic="true"
+  >
+    <!-- prettier-ignore -->
+    <div class="toast-content d-flex justify-content-between align-items-center p-3">
+        <div class="login-required-message fs-5 fw-bold"></div>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+  </div>
+</div>
 {% endblock %}
 
 <!-- prettier-ignore -->
