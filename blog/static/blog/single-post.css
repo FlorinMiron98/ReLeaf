@@ -63,6 +63,24 @@ main h1 {
   color: var(--color-primary);
 }
 
+main form label {
+  color: var(--color-primary);
+}
+
+main form textarea {
+  resize: none;
+}
+
+main form .comment-submit-btn {
+  background-color: var(--color-secondary);
+  border: none;
+}
+
+main form .comment-submit-btn:hover,
+main form .comment-submit-btn:active {
+  background-color: var(--color-secondary-light);
+}
+
 /* ============================== */
 /* Media Queries */
 /* ============================== */
