@@ -1,0 +1,13 @@
+#donation-fail-header {
+  background-color: var(--color-primary);
+}
+
+#donation-fail-header .return-to-donations-btn {
+  background-color: var(--color-secondary);
+  border: none;
+}
+
+#donation-fail-header .return-to-donations-btn:active,
+#donation-fail-header .return-to-donations-btn:hover {
+  background-color: var(--color-secondary-light);
+}
