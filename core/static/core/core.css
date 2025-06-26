@@ -81,7 +81,8 @@ main h1 {
   grid-area: image4;
 }
 
-.our-mission__content {
+.our-mission__content,
+.our-history__content {
   color: var(--color-black);
 }
 
@@ -95,6 +96,17 @@ main h1 {
 /* ================================== */
 /* Media Queries */
 /* ================================== */
+
+/* Large screen size */
+@media only screen and (max-width: 992px) {
+  #our-history-section .row .col-12:nth-of-type(1) {
+    order: 1;
+  }
+  #our-history-section .row .col-12:nth-of-type(2) {
+    order: 0;
+  }
+}
+
 /* Medium screen size */
 @media only screen and (max-width: 768px) {
   .navbar {
