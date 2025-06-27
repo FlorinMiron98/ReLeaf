@@ -3,13 +3,13 @@ const comments = document.querySelectorAll(".comment");
 const editCommentModalEl = document.getElementById("edit-comment-modal");
 const editCommentModal = new bootstrap.Modal(editCommentModalEl);
 const editContentTextarea = document.getElementById("edit-comment");
+const editCommentError = document.querySelector(".edit-comment-error");
 
 const commentToastActionEl = document.getElementById("comment-toast-action");
 const commentToastAction = new bootstrap.Toast(commentToastActionEl);
 const commentToastActionMessage = document.querySelector(
   ".comment-toast-action__message"
 );
-const errorMessage = "Comment update failed.";
 
 const saveEditBtn = document.querySelector(".save-edit-btn");
 
@@ -25,7 +25,6 @@ const displayToastAction = function (message) {
   commentToastActionMessage.textContent = message;
   commentToastAction.show();
 };
-1;
 
 const updateCommentUI = function (commentId, userComment) {
   comments.forEach((comment) => {
@@ -36,24 +35,39 @@ const updateCommentUI = function (commentId, userComment) {
   });
 };
 
+const displayCommentError = function (errorMessage) {
+  editCommentError.textContent = errorMessage;
+  editCommentError.classList.remove("d-none");
+};
+
+const hideCommentError = function () {
+  editCommentError.classList.add("d-none");
+};
+
 const submitEditedComment = async function (commentId) {
   try {
     const response = await fetch(`comments/${commentId}/edit/`, {
       method: "POST",
       headers: {
         "X-CSRFToken": getCSRFToken(),
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        user_comment: editContentTextarea.value,
+        user_comment: editContentTextarea.value.trim(),
       }),
     });
+
+    if (!response.ok) {
+      throw new Error("Comment must be between 10 and 300 characters");
+    }
+
     const data = await response.json();
 
     updateCommentUI(data.comment_id, data.user_comment);
     editCommentModal.hide();
     displayToastAction(data.message);
   } catch (error) {
-    displayToastAction(errorMessage);
+    displayCommentError(error.message);
   }
 };
 
@@ -73,7 +87,6 @@ comments.forEach((comment) => {
 saveEditBtn.addEventListener("click", function (e) {
   e.preventDefault();
   const commentId = this.closest("[data-comment-id]").dataset.commentId;
-  console.log(commentId);
-
   submitEditedComment(commentId);
+  hideCommentError();
 });
