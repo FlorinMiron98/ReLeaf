@@ -127,6 +127,14 @@ main .text-area-placeholder {
   background-color: var(--color-secondary-light);
 }
 
+/* ============================= */
+/* Comment Toasts */
+/* ============================= */
+#comment-toast-add,
+#comment-toast-action {
+  background-color: var(--color-secondary);
+}
+
 /* ============================== */
 /* Media Queries */
 /* ============================== */
