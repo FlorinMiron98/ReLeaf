@@ -25,6 +25,7 @@ main h1 {
 
 .comments-container {
   color: var(--color-black);
+  scroll-margin-bottom: 4rem;
 }
 
 .comment {
@@ -125,6 +126,10 @@ main .text-area-placeholder {
 #edit-comment-modal .save-edit-btn:active,
 #edit-comment-modal .save-edit-btn:hover {
   background-color: var(--color-secondary-light);
+}
+
+.edit-comment-error {
+  color: var(--color-red);
 }
 
 /* ============================= */
