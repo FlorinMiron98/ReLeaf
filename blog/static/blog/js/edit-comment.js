@@ -2,7 +2,7 @@ const comments = document.querySelectorAll(".comment");
 
 const editCommentModalEl = document.getElementById("edit-comment-modal");
 const editCommentModal = new bootstrap.Modal(editCommentModalEl);
-const editContentTextarea = document.getElementById("edit-comment");
+const editCommentTextarea = document.getElementById("edit-comment");
 const editCommentError = document.querySelector(".edit-comment-error");
 
 const commentToastActionEl = document.getElementById("comment-toast-action");
@@ -53,15 +53,17 @@ const submitEditedComment = async function (commentId) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        user_comment: editContentTextarea.value.trim(),
+        user_comment: editCommentTextarea.value.trim(),
       }),
     });
 
-    if (!response.ok) {
-      throw new Error("Comment must be between 10 and 300 characters");
-    }
-
     const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error(
+        data.error || "Comment must be between 10 and 300 characters"
+      );
+    }
 
     updateCommentUI(data.comment_id, data.user_comment);
     editCommentModal.hide();
@@ -78,7 +80,8 @@ comments.forEach((comment) => {
       editCommentModalEl.setAttribute("data-comment-id", commentId);
       const commentText =
         e.target.parentElement.previousElementSibling.textContent;
-      editContentTextarea.value = commentText.trim();
+      editCommentTextarea.value = commentText.trim();
+      hideCommentError();
       displayEditModal();
     }
   });
