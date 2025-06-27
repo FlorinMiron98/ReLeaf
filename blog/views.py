@@ -55,6 +55,7 @@ class SinglePostView(FormMixin, DetailView):
         comment.post = self.object
         comment.author = self.request.user
         comment.save()
+        messages.success(self.request, 'Comment added successfully.')
         return super().form_valid(form)
 
 class CommentUpdateView(LoginRequiredMixin, View):
@@ -79,5 +80,9 @@ class CommentUpdateView(LoginRequiredMixin, View):
         comment.user_comment = comment_text
         comment.save()
 
-        return JsonResponse({"user_comment": comment.user_comment})
+        return JsonResponse({
+            "user_comment": comment.user_comment,
+            'comment_id': comment.id,
+            'message': 'Comment updated successfully.'
+        })
         
