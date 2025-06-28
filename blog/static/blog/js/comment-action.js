@@ -53,8 +53,11 @@ const hideCommentError = function () {
 };
 
 const submitEditedComment = async function (commentId) {
+  let url = window.location.href;
+  let postSlug = url.split("blog")[1].slice(1);
+
   try {
-    const response = await fetch(`comments/${commentId}/edit/`, {
+    const response = await fetch(`${postSlug}/comments/${commentId}/edit/`, {
       method: "POST",
       headers: {
         "X-CSRFToken": getCSRFToken(),
@@ -82,8 +85,11 @@ const submitEditedComment = async function (commentId) {
 };
 
 const deleteComment = async function (commentId) {
+  let url = window.location.href;
+  let postSlug = url.split("blog")[1].slice(1);
+
   try {
-    const response = await fetch(`comments/${commentId}/delete/`, {
+    const response = await fetch(`${postSlug}/comments/${commentId}/delete/`, {
       method: "POST",
       headers: {
         "X-CSRFToken": getCSRFToken(),
