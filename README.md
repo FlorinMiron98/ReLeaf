@@ -1,8 +1,8 @@
 # ReLeaf
 ## Table of Contents
-1. UX
-   - Project Goals
-   - User Stories
+1. [UX](#ux)
+   - [Project Goals](#project-goals)
+   - [User Stories](#user-stories)
 2. Features
 3. Technologies Used
 4. Data Schema
@@ -13,10 +13,10 @@
    - Automated Testing
    - Bugs
 6. Deployment
-7. Credits
-   - Content
-   - Media
-   - Code
+7. [Credits](#credits)
+   - [Content](#content)
+   - [Media](#media)
+   - [Code](#code)
 ## Ux
 ### Project Goals
 1. Allow users to easily and securely donate money to support tree-planting efforts.
@@ -54,3 +54,4 @@
 11. tree-illustration.png: [Image source](https://www.freepik.com/free-vector/autumn-tree-concept-illustration_90470531.htm#fromView=keyword&page=1&position=7&uuid=06aedf97-6c80-481b-9f07-2202c2fac22b&query=Tree+Illustration)
 12. forest-trees.jpg: [Image source](https://unsplash.com/photos/forest-trees-jFCViYFYcus) - Photo by [Lukasz Szmigiel](https://unsplash.com/@szmigieldesign)
 13. two-brown-trees.jpg: [Image source](https://www.pexels.com/photo/two-brown-trees-1632790/) - Photo by [Johannes Plenio](https://www.pexels.com/@jplenio/)
+#### Code
