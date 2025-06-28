@@ -4,7 +4,7 @@
    - [Project Goals](#project-goals)
    - [User Stories](#user-stories)
 2. Features
-3. Technologies Used
+3. [Technologies Used](#technologies-used)
 4. Data Schema
 5. Testing
    - Validator Testing
@@ -31,8 +31,15 @@
 3. As a visitor or user, I want to read blog posts about the charity’s work and updates, and as a logged-in user, I want to leave comments on posts, so that I can stay informed and engage with the organization.
 4. As a logged-in user, I want to see suggested donation options, but be able to enter a custom amount, so that I can donate whatever feels right to me.
 5. As a visitor using any device (phone, tablet, or desktop), I want to view and use the website comfortably, so that I can read content, donate, and navigate easily no matter what screen I'm on.
-### Credits
-#### Content
+## Technologies used
+1. **HTML5** - The foundational markup language for structuring web content.
+2. **CSS3** - Used for styling and layout, enhancing the visual appearance of the project.
+3. **Bootstrap5** - Used for creating responsiveness across all screen sizes, pre-designed components and utility classes. More about Bootstrap on the [official Bootstrap website](https://getbootstrap.com/)
+4. **JavaScript** - It is used to handle user interactions, manipulate the DOM, and manage application logic.
+5. **Django** - A high-level Python web framework that promotes rapid development and clean, pragmatic design. It handles the backend, including URL routing, data modeling, and server-side logic.
+6. **Vitest** - A fast and lightweight testing framework built for modern JavaScript projects. It is used to implement test-driven development (TDD). More about Vitest on the [official website](https://vitest.dev/)
+## Credits
+### Content
 - [ChatGPT](https://chatgpt.com/) - Used to create content for:
   - `<meta>` keywords attribute
   - `<meta>` description content
@@ -40,7 +47,7 @@
   - About page heading, lead paragraph and content of other sections
   - Blog posts content
   - Donations page heading, lead paragraph and donation cards content
-#### Media
+### Media
 1. favicon: [Image source](https://icons8.com/icons/set/leaf)
 2. tree-hugging.jpg: [Image source](https://unsplash.com/photos/a-person-hugging-a-tree-in-a-forest-yIsjn-IGWqc) - Photo by [Trent Haaland](https://unsplash.com/@trenthaaland)
 3. planting-your-seedling.jpg: [Image source](https://pixabay.com/photos/plant-planting-life-nature-natural-7702566/) - Photo by [F1Digitals](https://pixabay.com/users/f1digitals-1568321/)
@@ -54,4 +61,4 @@
 11. tree-illustration.png: [Image source](https://www.freepik.com/free-vector/autumn-tree-concept-illustration_90470531.htm#fromView=keyword&page=1&position=7&uuid=06aedf97-6c80-481b-9f07-2202c2fac22b&query=Tree+Illustration)
 12. forest-trees.jpg: [Image source](https://unsplash.com/photos/forest-trees-jFCViYFYcus) - Photo by [Lukasz Szmigiel](https://unsplash.com/@szmigieldesign)
 13. two-brown-trees.jpg: [Image source](https://www.pexels.com/photo/two-brown-trees-1632790/) - Photo by [Johannes Plenio](https://www.pexels.com/@jplenio/)
-#### Code
+### Code
