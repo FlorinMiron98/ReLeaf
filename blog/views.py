@@ -85,4 +85,22 @@ class CommentUpdateView(LoginRequiredMixin, View):
             'comment_id': comment.id,
             'message': 'Comment updated successfully.'
         })
+
+class CommentDeleteView(LoginRequiredMixin, View):
+    def post(self, request, pk, *args, **kwargs):
+        comment = get_object_or_404(Comment, pk=pk)
+
+        if comment.author != request.user:
+            return JsonResponse(
+                {'error': 'You are not allowed to delete this comment'},
+                status=403
+            )
+
+        comment.delete()
+
+        return JsonResponse({
+            'comment_id': pk,
+            'message': 'Comment deleted successfully.',
+        })
+        
         
