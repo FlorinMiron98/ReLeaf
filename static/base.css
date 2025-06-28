@@ -94,3 +94,18 @@ h6 {
 .container .navbar-nav .dropdown-menu .dropdown-item:hover {
   background-color: var(--color-primary);
 }
+
+#not-found-header {
+  background-color: var(--color-primary);
+}
+
+#not-found-header .not-found-btn {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  border: none;
+}
+
+#not-found-header .not-found-btn:active,
+#not-found-header .not-found-btn:hover {
+  background-color: var(--color-secondary-light);
+}
