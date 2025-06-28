@@ -53,11 +53,11 @@
         </div>
         {% endif %}
       </div>
-      {% endfor %} {% else %}
-      <p class="comments-placeholder text-center fs-4 fw-bold my-4">
+      {% endfor %} {% endif %}
+      <!-- prettier-ignore -->
+      <p class="comments-placeholder {% if 'has_comments' %} d-block {% else %} d-none {% endif %} text-center fs-4 fw-bold my-4">
         This post has no comments yet.
       </p>
-      {% endif %}
     </div>
 
     {% if user.is_authenticated %}
