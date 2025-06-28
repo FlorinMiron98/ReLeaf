@@ -1,0 +1,24 @@
+{% extends "base.html" %} {% load static %}
+
+<!-- prettier-ignore -->
+{% block content %}
+<header class="min-vh-100 d-flex align-items-center" id="not-found-header">
+  {% include "includes/navbar.html" %}
+  <div class="container d-flex flex-column">
+    <h1 class="text-center display-5 fw-bold">404</h1>
+    <p class="text-center fs-3">
+      Oops! The page you're looking for doesn't exist.
+    </p>
+    <p class="lead text-center">
+      It might have been removed, renamed, or did not exist in the first place.
+    </p>
+    <div class="text-center mt-3">
+      <a
+        class="not-found-btn btn py-3 px-4 fw-bold rounded-5"
+        href="{% url 'home' %}"
+        >Return to Homepage</a
+      >
+    </div>
+  </div>
+</header>
+{% endblock %}
