@@ -35,6 +35,14 @@ const updateCommentUI = function (commentId, userComment) {
   });
 };
 
+const deleteCommentUI = function (commentId) {
+  comments.forEach((comment) => {
+    if (+comment.dataset.commentId === commentId) {
+      comment.remove();
+    }
+  });
+};
+
 const displayCommentError = function (errorMessage) {
   editCommentError.textContent = errorMessage;
   editCommentError.classList.remove("d-none");
@@ -73,6 +81,27 @@ const submitEditedComment = async function (commentId) {
   }
 };
 
+const deleteComment = async function (commentId) {
+  try {
+    const response = await fetch(`comments/${commentId}/delete/`, {
+      method: "POST",
+      headers: {
+        "X-CSRFToken": getCSRFToken(),
+      },
+    });
+    const data = await response.json();
+
+    if (!response.ok) {
+      throw new Error("Comment deletion failed.");
+    }
+
+    deleteCommentUI(data.comment_id);
+    displayToastAction(data.message);
+  } catch (error) {
+    displayToastAction(error.message);
+  }
+};
+
 comments.forEach((comment) => {
   comment.addEventListener("click", (e) => {
     if (e.target.classList.contains("comment__buttons--edit")) {
@@ -83,6 +112,11 @@ comments.forEach((comment) => {
       editCommentTextarea.value = commentText.trim();
       hideCommentError();
       displayEditModal();
+    }
+
+    if (e.target.classList.contains("comment__buttons--delete")) {
+      const commentId = e.target.closest("[data-comment-id]").dataset.commentId;
+      deleteComment(commentId);
     }
   });
 });
