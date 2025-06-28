@@ -40,3 +40,17 @@
   - About page heading, lead paragraph and content of other sections
   - Blog posts content
   - Donations page heading, lead paragraph and donation cards content
+#### Media
+1. favicon: [Image source](https://icons8.com/icons/set/leaf)
+2. tree-hugging.jpg: [Image source](https://unsplash.com/photos/a-person-hugging-a-tree-in-a-forest-yIsjn-IGWqc) - Photo by [Trent Haaland](https://unsplash.com/@trenthaaland)
+3. planting-your-seedling.jpg: [Image source](https://pixabay.com/photos/plant-planting-life-nature-natural-7702566/) - Photo by [F1Digitals](https://pixabay.com/users/f1digitals-1568321/)
+4. many-hands-one-tree.jpg: [Image source](https://unsplash.com/photos/a-group-of-people-holding-hands-on-top-of-a-tree-DNkoNXQti3c) - Photo by [Shane Rounce](https://unsplash.com/@shanerounce)
+5. forest-edge.jpg: [Image source](https://www.pexels.com/photo/lush-springtime-landscape-with-dense-trees-32602818/) - Photo by [Наталья Севрук](https://www.pexels.com/@636238602/)
+6. woman-walking-under-tree.jpg: [Image source](https://unsplash.com/photos/woman-walking-under-tree-during-daytime-Z5qD8T3wVvk) - Photo by [Kevin Young](https://unsplash.com/@kevinjyoung)
+7. amazon-planting.jpg: [Image source](https://unsplash.com/photos/people-in-yellow-jacket-and-black-backpack-FyCjvyPG9Pg) - Photo by [Eyoel Kahssay](https://unsplash.com/@eyoelkahssay)
+8. volunteer.jpg: [Image source](https://unsplash.com/photos/man-in-white-shirt-planting-at-daytime-1JgUGDdcWnM) - Photo by [Jed Owen](https://unsplash.com/@jediahowen)
+9. amazon-jungle.jpg: [Image source](https://pixabay.com/photos/body-of-water-nature-tree-river-3228741/) - Photo by [estevesbae](https://pixabay.com/users/estevesbae-8123618/)
+10. trees-landscape.jpg: [Image source](https://pixabay.com/photos/meadow-landscape-fruit-trees-7196549/) - Photo by [analogicus](https://pixabay.com/users/analogicus-8164369/)
+11. tree-illustration.png: [Image source](https://www.freepik.com/free-vector/autumn-tree-concept-illustration_90470531.htm#fromView=keyword&page=1&position=7&uuid=06aedf97-6c80-481b-9f07-2202c2fac22b&query=Tree+Illustration)
+12. forest-trees.jpg: [Image source](https://unsplash.com/photos/forest-trees-jFCViYFYcus) - Photo by [Lukasz Szmigiel](https://unsplash.com/@szmigieldesign)
+13. two-brown-trees.jpg: [Image source](https://www.pexels.com/photo/two-brown-trees-1632790/) - Photo by [Johannes Plenio](https://www.pexels.com/@jplenio/)
