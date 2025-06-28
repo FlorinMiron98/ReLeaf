@@ -8,4 +8,5 @@ class HomepageView(TemplateView):
 
 class AboutView(TemplateView):
     template_name = 'core/about.html'
+
     
