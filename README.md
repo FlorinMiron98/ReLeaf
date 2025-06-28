@@ -36,7 +36,7 @@
 2. **CSS3** - Used for styling and layout, enhancing the visual appearance of the project.
 3. **Bootstrap5** - Used for creating responsiveness across all screen sizes, pre-designed components and utility classes. More about Bootstrap on the [official Bootstrap website](https://getbootstrap.com/)
 4. **JavaScript** - It is used to handle user interactions, manipulate the DOM, and manage application logic.
-5. **Django** - A high-level Python web framework that promotes rapid development and clean, pragmatic design. It handles the backend, including URL routing, data modeling, and server-side logic.
+5. **Django** - A high-level Python web framework that promotes rapid development and clean, pragmatic design. It handles the backend, including URL routing, data modeling, and server-side logic. More about Django on the [official website](https://www.djangoproject.com/)
 6. **Vitest** - A fast and lightweight testing framework built for modern JavaScript projects. It is used to implement test-driven development (TDD). More about Vitest on the [official website](https://vitest.dev/)
 ## Credits
 ### Content
@@ -62,3 +62,6 @@
 12. forest-trees.jpg: [Image source](https://unsplash.com/photos/forest-trees-jFCViYFYcus) - Photo by [Lukasz Szmigiel](https://unsplash.com/@szmigieldesign)
 13. two-brown-trees.jpg: [Image source](https://www.pexels.com/photo/two-brown-trees-1632790/) - Photo by [Johannes Plenio](https://www.pexels.com/@jplenio/)
 ### Code
+1. Code for all website's icons was created using [Font Awesome](https://fontawesome.com/).
+2. Code for importing Google Fonts inside the `static/assets/styles.css` file was created using [Google Fonts](https://fonts.google.com/).
+3. Code for template inheritance was created using the built-in Django's `{% extends %}` and `{% include %}` tags.
