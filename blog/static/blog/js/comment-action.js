@@ -11,6 +11,8 @@ const commentToastActionMessage = document.querySelector(
   ".comment-toast-action__message"
 );
 
+const commentsPlaceholder = document.querySelector(".comments-placeholder");
+
 const saveEditBtn = document.querySelector(".save-edit-btn");
 
 const getCSRFToken = function () {
@@ -26,6 +28,17 @@ const displayToastAction = function (message) {
   commentToastAction.show();
 };
 
+const checkCommentsContainer = function () {
+  const commentsContainer = document.querySelector(".comments-container");
+  if (commentsContainer.childElementCount === 1) {
+    commentsPlaceholder.classList.remove("d-none");
+    commentsPlaceholder.classList.add("d-block");
+  } else {
+    commentsPlaceholder.classList.remove("d-block");
+    commentsPlaceholder.classList.add("d-none");
+  }
+};
+
 const updateCommentUI = function (commentId, userComment) {
   comments.forEach((comment) => {
     if (+comment.dataset.commentId === commentId) {
@@ -39,6 +52,7 @@ const deleteCommentUI = function (commentId) {
   comments.forEach((comment) => {
     if (+comment.dataset.commentId === commentId) {
       comment.remove();
+      checkCommentsContainer();
     }
   });
 };
@@ -126,4 +140,8 @@ saveEditBtn.addEventListener("click", function (e) {
   const commentId = this.closest("[data-comment-id]").dataset.commentId;
   submitEditedComment(commentId);
   hideCommentError();
+});
+
+window.addEventListener("DOMContentLoaded", () => {
+  checkCommentsContainer();
 });
