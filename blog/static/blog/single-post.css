@@ -75,25 +75,25 @@ main h1 {
   color: var(--color-primary);
 }
 
-main form label {
+#comments-section form label {
   color: var(--color-primary);
 }
 
-main form textarea {
+#comments-section form textarea {
   resize: none;
 }
 
-main form .comment-submit-btn {
+#comments-section form .comment-submit-btn {
   background-color: var(--color-secondary);
   border: none;
 }
 
-main form .comment-submit-btn:hover,
-main form .comment-submit-btn:active {
+#comments-section form .comment-submit-btn:hover,
+#comments-section form .comment-submit-btn:active {
   background-color: var(--color-secondary-light);
 }
 
-main .text-area-placeholder {
+#comments-section .text-area-placeholder {
   color: var(--color-primary);
 }
 
