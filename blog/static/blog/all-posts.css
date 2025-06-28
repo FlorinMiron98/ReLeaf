@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 #all-posts-header {
   background-color: var(--color-primary);
 }
@@ -8,19 +15,28 @@
 
 .container .post-link {
   text-decoration: none;
+  -webkit-transition: -webkit-transform 0.1s linear;
+  transition: -webkit-transform 0.1s linear;
+  -o-transition: transform 0.1s linear;
   transition: transform 0.1s linear;
+  transition: transform 0.1s linear, -webkit-transform 0.1s linear;
 }
 
 .container .post-link:hover {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
   transform: scale(1.05);
 }
 
 .container .post-link:active {
+  -webkit-transform: scale(1.025);
+  -ms-transform: scale(1.025);
   transform: scale(1.025);
 }
 
 .container .card .card-img-top {
   /* 215px / 16 */
   height: 13.4375rem;
+  -o-object-fit: cover;
   object-fit: cover;
 }

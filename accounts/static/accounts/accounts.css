@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 #register-header,
 #login-header {
   background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
@@ -24,6 +31,26 @@
   background-color: var(--color-gray-transparent);
   caret-color: var(--color-gray-light);
   color: var(--color-white);
+}
+
+#register-header form input::-webkit-input-placeholder,
+#login-header form input::-webkit-input-placeholder {
+  color: var(--color-gray-light);
+}
+
+#register-header form input::-moz-placeholder,
+#login-header form input::-moz-placeholder {
+  color: var(--color-gray-light);
+}
+
+#register-header form input:-ms-input-placeholder,
+#login-header form input:-ms-input-placeholder {
+  color: var(--color-gray-light);
+}
+
+#register-header form input::-ms-input-placeholder,
+#login-header form input::-ms-input-placeholder {
+  color: var(--color-gray-light);
 }
 
 #register-header form input::placeholder,
