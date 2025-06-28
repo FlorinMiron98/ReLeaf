@@ -1,4 +1,22 @@
 # ReLeaf
+## Table of Contents
+1. UX
+   - Project Goals
+   - User Stories
+2. Features
+3. Technologies Used
+4. Data Schema
+5. Testing
+   - Validator Testing
+   - Performance, Accessibility and Best Practices Testing
+   - Manual Testing
+   - Automated Testing
+   - Bugs
+6. Deployment
+7. Credits
+   - Content
+   - Media
+   - Code
 ## Ux
 ### Project Goals
 1. Allow users to easily and securely donate money to support tree-planting efforts.
