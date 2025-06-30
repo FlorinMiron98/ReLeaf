@@ -15,7 +15,7 @@
 6. [Donations Page](#donations-page)
    - [Donation Cards](#donation-cards)
    - [Donation Amount Selector](#donation-amount-selector)
-7. Login/Register Page
+7. [Login/Register Page](#loginregister-page)
 8. Stripe Payment
 9. Payment Confirmation Page
 
@@ -93,4 +93,13 @@ An interactive range slider allows users to select a custom donation amount betw
 
 ![donation-amount-selector](https://github.com/user-attachments/assets/ae414864-d353-4e08-92a0-0f40742f5f7b)
 
+## Login/Register Page
+This page provides secure access for users to join or return to the platform:
+- **Register**: New users can create an account by entering a username, password, and confirming the password to ensure accuracy.
+
+![register-page](https://github.com/user-attachments/assets/3330a0ae-9446-4182-bf1d-4fdc7d08e8dd)
+
+- **Login**: Returning users can quickly access their account by submitting their username and password.
+
+![login-page](https://github.com/user-attachments/assets/dcff4182-8c77-4c09-a2a0-92d232a1eba9)
 
