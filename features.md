@@ -9,10 +9,9 @@
    - [Mission and Vision Section](#mission-and-vision-section)
    - [History Section](#history-section)
 4. [Blog Page](#blog-page)
-5. Single Blog Post Page
-   - Blog Post Details
-   - Comments Section
-   - User Comment
+5. [Single Blog Post Page](#single-blog-post-page)
+   - [Blog Post Details](#blog-post-details)
+   - [Comments Section](#comments-section)
 6. Donations Page
    - Donation Card
    - Donation Amount Selector
@@ -63,3 +62,22 @@ The blog page presents the latest posts in a clean, card-based layout. Each blog
 - A brief excerpt to give readers a preview.
 
 ![blog-page](https://github.com/user-attachments/assets/4e27cdb7-05e2-4992-b64c-e84f951118da)
+
+## Single Blog Post Page
+### Blog Post Details
+This page provides a detailed view of an individual blog post, featuring:
+- A prominent header image to set the tone
+- The blog post heading
+- Date posted and author information for context
+- A descriptive, well-structured paragraph that delivers the full content
+
+![single-blog-post-page](https://github.com/user-attachments/assets/d2dfdb20-c729-4e5a-8a0c-142acd3d10ac)
+
+### Comments Section
+The comments section enables logged-in users to engage with blog posts by leaving feedback. Each comment displays:
+- The commenter’s username
+- The date the comment was posted
+- The comment content itself
+Additionally, if the logged-in user is the author of a comment, **Edit** and **Delete** buttons appear, allowing them to manage their own comments seamlessly.
+
+![comments-section](https://github.com/user-attachments/assets/410ebcfb-c5ec-4da5-a73a-22401050d513)
