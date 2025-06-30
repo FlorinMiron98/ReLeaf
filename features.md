@@ -8,7 +8,7 @@
    - [Gallery Section](#gallery-section)
    - [Mission and Vision Section](#mission-and-vision-section)
    - [History Section](#history-section)
-4. Blog Page
+4. [Blog Page](#blog-page)
 5. Single Blog Post Page
    - Blog Post Details
    - Comments Section
@@ -17,7 +17,8 @@
    - Donation Card
    - Donation Amount Selector
 7. Login/Register Page
-8. Payment Confirmation Page
+8. Stripe Payment
+9. Payment Confirmation Page
 
 ## Navigation Bar
 The navigation bar provides a consistent and user-friendly way to explore the application. It includes the logo and links to the home page, about page, blog page, donations page and login/register page.
@@ -55,4 +56,10 @@ The History section highlights the charity’s journey, milestones, and key achi
 
 ![history](https://github.com/user-attachments/assets/13fd3bdf-2b6f-416d-81fd-2ec8292e045b)
 
+## Blog Page
+The blog page presents the latest posts in a clean, card-based layout. Each blog card includes:
+- A descriptive image that captures the essence of the post.
+- A clear, engaging heading.
+- A brief excerpt to give readers a preview.
 
+![blog-page](https://github.com/user-attachments/assets/4e27cdb7-05e2-4992-b64c-e84f951118da)
