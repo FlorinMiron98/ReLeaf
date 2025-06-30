@@ -21,7 +21,7 @@
    - [Stripe Payment](https://github.com/FlorinMiron98/ReLeaf/blob/main/features.md#stripe-payment)
    - [Payment Confirmation Page](https://github.com/FlorinMiron98/ReLeaf/blob/main/features.md#payment-confirmation-page)
 4. [Technologies Used](#technologies-used)
-5. Data Schema
+5. [Data Schema](https://github.com/FlorinMiron98/ReLeaf/blob/main/data-schema.md)
 6. Testing
    - Validator Testing
    - Performance, Accessibility and Best Practices Testing
