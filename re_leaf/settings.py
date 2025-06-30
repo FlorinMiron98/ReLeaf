@@ -17,6 +17,9 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+POSTGRESQL_USER = os.getenv('POSTGRESQL_USER')
+POSTGRESQL_PASSWORD = os.getenv('POSTGRESQL_PASSWORD')
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -28,9 +31,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.getenv('IS_DEVELOPMENT', True)
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = [
+    os.getenv('APP_HOST', '127.0.0.1')
+]
 
 
 # Application definition
@@ -85,8 +90,12 @@ WSGI_APPLICATION = 're_leaf.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': POSTGRESQL_USER,
+        'PASSWORD': POSTGRESQL_PASSWORD,
+        'HOST': 'django-releaf.cfm82oqq4qqg.eu-north-1.rds.amazonaws.com',
+        'PORT': '5432'
     }
 }
 
@@ -125,6 +134,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
