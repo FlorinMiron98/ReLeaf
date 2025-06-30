@@ -103,3 +103,8 @@ This page provides secure access for users to join or return to the platform:
 
 ![login-page](https://github.com/user-attachments/assets/dcff4182-8c77-4c09-a2a0-92d232a1eba9)
 
+## Stripe Payment
+When a user clicks the Donate button, they are redirected to a secure Stripe payment page to complete their donation. The donation lead paragraph dynamically updates based on the selected amount, ensuring clarity and personalized messaging throughout the process.
+
+![stripe-payment](https://github.com/user-attachments/assets/6aa54f4e-f503-4e7f-8c0c-707db96196bd)
+
