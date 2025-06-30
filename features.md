@@ -16,8 +16,8 @@
    - [Donation Cards](#donation-cards)
    - [Donation Amount Selector](#donation-amount-selector)
 7. [Login/Register Page](#loginregister-page)
-8. Stripe Payment
-9. Payment Confirmation Page
+8. [Stripe Payment](#stripe-payment)
+9. [Payment Confirmation Page](#payment-confirmation-page)
 
 ## Navigation Bar
 The navigation bar provides a consistent and user-friendly way to explore the application. It includes the logo and links to the home page, about page, blog page, donations page and login/register page.
@@ -108,3 +108,10 @@ When a user clicks the Donate button, they are redirected to a secure Stripe pay
 
 ![stripe-payment](https://github.com/user-attachments/assets/6aa54f4e-f503-4e7f-8c0c-707db96196bd)
 
+## Payment Confirmation Page
+After a successful donation, this page thanks the user with:
+- A prominent Thank You heading
+- A warm lead paragraph expressing appreciation
+- A button that redirects the user back to the homepage
+
+![payment-cofirmation-page](https://github.com/user-attachments/assets/df734ce7-3f7b-41a7-964a-be0a52ce9ec8)
