@@ -4,16 +4,32 @@
    - [Project Goals](#project-goals)
    - [User Stories](#user-stories)
 2. [Features](https://github.com/FlorinMiron98/ReLeaf/blob/main/features.md)
-3. [Technologies Used](#technologies-used)
-4. Data Schema
-5. Testing
+   - [Navigation Bar](https://github.com/FlorinMiron98/ReLeaf/blob/main/features.md#navigation-bar)
+   - [Home Page](https://github.com/FlorinMiron98/ReLeaf/blob/main/features.md#home-page)
+   - [About Page](https://github.com/FlorinMiron98/ReLeaf/blob/main/features.md#about-page)
+     - [Statistics](https://github.com/FlorinMiron98/ReLeaf/blob/main/features.md#statistics)
+     - [Mission and Vision Section](https://github.com/FlorinMiron98/ReLeaf/blob/main/features.md#mission-and-vision-section)
+     - [History Section](https://github.com/FlorinMiron98/ReLeaf/blob/main/features.md#history-section)
+   - [Blog Page](https://github.com/FlorinMiron98/ReLeaf/blob/main/features.md#blog-page)
+   - [Single Blog Post Page](https://github.com/FlorinMiron98/ReLeaf/blob/main/features.md#single-blog-post-page)
+     - [Blog Post Details](https://github.com/FlorinMiron98/ReLeaf/blob/main/features.md#blog-post-details)
+     - [Comments Section](https://github.com/FlorinMiron98/ReLeaf/blob/main/features.md#comments-section)
+   - [Donations Page](https://github.com/FlorinMiron98/ReLeaf/blob/main/features.md#donations-page)
+     - [Donation Cards](https://github.com/FlorinMiron98/ReLeaf/blob/main/features.md#donation-cards)
+     - [Donation Amount Selector](https://github.com/FlorinMiron98/ReLeaf/blob/main/features.md#donation-amount-selector)
+   - [Login/Register Page](https://github.com/FlorinMiron98/ReLeaf/blob/main/features.md#loginregister-page)
+   - [Stripe Payment](https://github.com/FlorinMiron98/ReLeaf/blob/main/features.md#stripe-payment)
+   - [Payment Confirmation Page](https://github.com/FlorinMiron98/ReLeaf/blob/main/features.md#payment-confirmation-page)
+4. [Technologies Used](#technologies-used)
+5. Data Schema
+6. Testing
    - Validator Testing
    - Performance, Accessibility and Best Practices Testing
    - Manual Testing
    - Automated Testing
    - Bugs
-6. Deployment
-7. [Credits](#credits)
+7. Deployment
+8. [Credits](#credits)
    - [Content](#content)
    - [Media](#media)
    - [Code](#code)
