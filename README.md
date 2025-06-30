@@ -3,7 +3,7 @@
 1. [UX](#ux)
    - [Project Goals](#project-goals)
    - [User Stories](#user-stories)
-2. Features
+2. [Features](https://github.com/FlorinMiron98/ReLeaf/blob/main/features.md)
 3. [Technologies Used](#technologies-used)
 4. Data Schema
 5. Testing
