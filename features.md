@@ -12,9 +12,9 @@
 5. [Single Blog Post Page](#single-blog-post-page)
    - [Blog Post Details](#blog-post-details)
    - [Comments Section](#comments-section)
-6. Donations Page
-   - Donation Card
-   - Donation Amount Selector
+6. [Donations Page](#donations-page)
+   - [Donation Cards](#donation-cards)
+   - [Donation Amount Selector](#donation-amount-selector)
 7. Login/Register Page
 8. Stripe Payment
 9. Payment Confirmation Page
@@ -81,3 +81,16 @@ The comments section enables logged-in users to engage with blog posts by leavin
 Additionally, if the logged-in user is the author of a comment, **Edit** and **Delete** buttons appear, allowing them to manage their own comments seamlessly.
 
 ![comments-section](https://github.com/user-attachments/assets/410ebcfb-c5ec-4da5-a73a-22401050d513)
+
+## Donations Page
+### Donation Cards
+Each card features a tree illustration, a specific donation amount (5, 10, 25, 50, 100, or 250 GBP), a unique lead paragraph tailored to that amount, and a **Donate** button which leads the user to the payment page.
+
+![donations-page](https://github.com/user-attachments/assets/dfb8ac13-b236-4a5a-8daf-099354c37234)
+
+### Donation Amount Selector
+An interactive range slider allows users to select a custom donation amount between 1 and 250 GBP, providing flexibility and control. The donation value is reflected dynamically in the UI as the user interacts with the range slider
+
+![donation-amount-selector](https://github.com/user-attachments/assets/ae414864-d353-4e08-92a0-0f40742f5f7b)
+
+
