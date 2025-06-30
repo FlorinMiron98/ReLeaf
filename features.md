@@ -1,7 +1,7 @@
 # Features
 ## [Main README.md file](https://github.com/FlorinMiron98/ReLeaf/blob/main/README.md)
 ## Table of Contents
-1. Navigation Bar
+1. [Navigation Bar](#navigation-bar)
 2. Home Page
    - Call-to-action Buttons (Donate & Blog)
 3. About Page
@@ -19,3 +19,9 @@
    - Donation Amount Selector
 7. Login/Register Page
 8. Payment Confirmation Page
+
+## Navigation Bar
+The navigation bar provides a consistent and user-friendly way to explore the application. It includes the logo and links to the home page, about page, blog page, donations page and login/register page.
+
+![navigation-bar](https://github.com/user-attachments/assets/51aaa50e-d615-4d07-96ed-4bdd011d3b64)
+
