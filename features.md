@@ -4,7 +4,7 @@
 1. [Navigation Bar](#navigation-bar)
 2. [Home Page](#home-page)
 3. [About Page](#about-page)
-   - [Statistics](statistics)
+   - [Statistics](#statistics)
    - [Gallery Section](#gallery-section)
    - [Mission and Vision Section](#mission-and-vision-section)
    - [History Section](#history-section)
