@@ -102,3 +102,62 @@ Performance, accessibility, and best practices tests were conducted using [Googl
 
 **Notes**:
 - The website currently lacks HTTPS because enabling SSL/TLS certificates on AWS incurs additional costs, which negatively impacts the Google Lighthouse best practices score.
+
+## Manual Testing
+The following tables outlines the results of manual testing conducted based on user stories to ensure the application behaves as expected and meets user requirements.
+1. As a potential donor, I want to create an account and log in so that I can securely access my profile and donate to tree-planting projects.
+   | Test Description | Outcome | Status |
+   | ---------------- | ------- | ------ |
+   | Verify that the register page is accessible | User can navigate to the register page | Passed |
+   | Create a new donor account with valid details | Account is successfully created and the user is logged in automatically | Passed |
+   | Log in with valid credentials | User is successfully logged in and redirected to home page | Passed |
+   | Verify validation for required fields during signup | Appropriate error messages shown for missing fields | Passed |
+   | Verify that password meets security requirements | User cannot create account with weak password | Passed |
+   | Verify login with invalid credentials | Error message displayed and login denied | Passed |
+   | Verify user session remains active after login | User stays logged in while browsing | Passed |
+   | Verify logout functionality | User can log out and session is terminated | Passed |
+   | Verify that user can access profile only after login | Profile page is restricted to logged-in users | Passed |
+
+2. As a visitor to the website, I want to read about the organization and its mission, so that I can understand who is behind the project and feel confident about donating.
+   | Test Description | Outcome | Status |
+   | ---------------- | ------- | ------ |
+   | Verify that the About Us page is accessible | Visitor can navigate to the About Us page | Passed |
+   | Verify the presence of organization’s mission statement | Mission statement is clearly displayed and readable | Passed |
+   | Verify that content on About Us page loads correctly | All text, images, and links load without errors | Passed |
+   | Verify navigation to About Us page from homepage | Visitor can easily find and access About Us page | Passed |
+   | Verify responsiveness of About Us page on different devices | Content displays properly on desktop, tablet, mobile | Passed |
+   | Verify no login is required to access About Us page | Page accessible to all visitors without login | Passed |
+
+3. As a visitor or user, I want to read blog posts about the charity’s work and updates, and as a logged-in user, I want to leave comments on posts, so that I can stay informed and engage with the organization.
+   | Test Description | Outcome | Status |
+   | ---------------- | ------- | ------ |
+   | Verify that the blog posts page is accessible to visitors | Visitors can navigate to and view the list of blog posts | Passed |
+   | Verify that individual blog posts load correctly | Blog posts display full content, images author and post date | Passed |
+   | Verify that visitors can read blog posts without logging in | Blog content is accessible without requiring login | Passed |
+   | Verify that logged-in users can see a comment input field | Comment box is visible only to logged-in users | Passed |
+   | Verify that logged-in users can submit a comment successfully | Submitted comment appears under the blog post | Passed |
+   | Verify comment validation (e.g., empty comment, length) | Appropriate error messages shown for invalid comments | Passed |
+   | Verify that comments from logged-in users are attributed | Comments display username or profile info correctly | Passed |
+   | Verify that comments are saved and displayed after refresh | Comments persist and are visible after page reload | Passed |
+   | Verify that non-logged-in visitors cannot submit comments | Comment input is hidden or disabled for visitors | Passed |
+
+4. As a logged-in user, I want to see suggested donation options, but be able to enter a custom amount, so that I can donate whatever feels right to me.
+   | Test Description | Outcome | Status |
+   | ---------------- | ------- | ------ |
+   | Verify that suggested donation amounts are displayed | Suggested amounts (e.g., $10, $25, $50) are visible | Passed |
+   | Verify that user can select a suggested donation amount | Clicking a suggested amount redirects the user to the payment page | Passed |
+   | Verify that user can select a custom donation amount | User can manually select any valid donation amount | Passed |
+   | Verify that donation can be submitted with suggested amount | Payment page is displayed correctly with a suggested amount | Passed |
+   | Verify that donation can be submitted with selected amount | Payment page is displayed correctly with a custom entered amount | Passed |
+   | Verify error handling if donation submission fails | Appropriate error message displayed on failed transaction | Passed |
+
+5. As a visitor using any device (phone, tablet, or desktop), I want to view and use the website comfortably, so that I can read content, donate, and navigate easily no matter what screen I'm on.
+   | Test Description | Outcome | Status |
+   | ---------------- | ------- | ------ |
+   | Verify website layout adapts correctly on desktop devices | Content displays properly and navigation works on desktop | Passed |
+   | Verify website layout adapts correctly on tablets | Content displays properly and navigation works on tablets | Passed |
+   | Verify website layout adapts correctly on mobile phones | Content displays properly and navigation works on mobiles | Passed |
+   | Verify text is readable without zooming on all device types | Text size and contrast are comfortable to read | Passed |
+   | Verify buttons and links are easily tappable on touch devices | Buttons and links respond well to taps with no misclicks | Passed |
+   | Verify key user flows (reading content, donating, navigating) | Core tasks can be completed comfortably on all devices | Passed |
+   | Verify images and media resize appropriately | Images scale correctly without distortion on different screens | Passed |
