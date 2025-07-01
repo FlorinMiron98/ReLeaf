@@ -1,4 +1,8 @@
 # ReLeaf
+
+![homepage](https://github.com/user-attachments/assets/a14d5acf-59fc-46ae-978f-fe1c8abe2a92)
+
+
 ## Table of Contents
 1. [UX](#ux)
    - [Project Goals](#project-goals)
