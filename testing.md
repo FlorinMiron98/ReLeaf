@@ -2,7 +2,7 @@
 ## [Main README.md] file
 ## Table of Contents
 1. [Validator Testing](#validator-testing)
-2. Performance, Accessibility and Best Practices Testing
+2. [Performance, Accessibility and Best Practices Testing](#performance-accessibility-and-best-practices-testing)
 3. Manual Testing
 4. Automated Testing
 5. Bugs
@@ -58,8 +58,47 @@
    ![Core](https://github.com/user-attachments/assets/130740f2-5b39-439f-bc4e-47c554f4b21f)
 
 
+## Performance, Accessibility and Best Practices Testing
+Performance, accessibility, and best practices tests were conducted using [Google Lighthouse](https://developer.chrome.com/docs/lighthouse/overview). Results for each page:
+1. Home Page
+   - **Performance**: 100
+   - **Accessibility**: 95
+   - **Best Practices**: 75
 
+   ![Home Page](https://github.com/user-attachments/assets/4a9952f5-8d41-4076-a7fc-9f2e14c4aa35)
 
+2. About Page
+   - **Performance**: 99
+   - **Accessibility**: 100
+   - **Best Practices**: 57
 
+   ![About Page](https://github.com/user-attachments/assets/43753535-6d07-41ef-b799-a9965001a521)
 
+3. Blog Page
+   - **Performance**: 95
+   - **Accessibility**: 98
+   - **Best Practices**: 75
 
+   ![Blog Page](https://github.com/user-attachments/assets/5f89c213-687c-49a3-9ac0-1e43307500d3)
+
+4. Donations Page
+   - **Performance**: 96
+   - **Accessibility**: 96
+   - **Best Practices**: 71
+
+   ![Donations Page](https://github.com/user-attachments/assets/1912941d-965b-4d25-a88e-2bf8a4676165)
+
+5. Register/Login Page
+   - **Performance**: 100
+   - **Accessibility**: 96
+   - **Best Practices**: 75
+
+   ![Register Page](https://github.com/user-attachments/assets/ea1ff6da-7d18-40b0-a89e-a5044dc813b4)
+
+6. Payment Confirmation Page
+   - **Performance**: 100
+   - **Accessibility**: 95
+   - **Best Practices**: 75
+
+**Notes**:
+- The website currently lacks HTTPS because enabling SSL/TLS certificates on AWS incurs additional costs, which negatively impacts the Google Lighthouse best practices score.
