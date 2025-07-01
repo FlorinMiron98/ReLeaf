@@ -3,8 +3,8 @@
 ## Table of Contents
 1. [Validator Testing](#validator-testing)
 2. [Performance, Accessibility and Best Practices Testing](#performance-accessibility-and-best-practices-testing)
-3. Manual Testing
-4. Automated Testing
+3. [Manual Testing](#manual-testing)
+4. [Automated Testing](#automated-testing)
 5. Bugs
 
 ## Validator Testing
@@ -161,3 +161,9 @@ The following tables outlines the results of manual testing conducted based on u
    | Verify buttons and links are easily tappable on touch devices | Buttons and links respond well to taps with no misclicks | Passed |
    | Verify key user flows (reading content, donating, navigating) | Core tasks can be completed comfortably on all devices | Passed |
    | Verify images and media resize appropriately | Images scale correctly without distortion on different screens | Passed |
+
+## Automated Testing
+- Automated tests can be found in the commit history.
+- Commit messages clearly indicate whether the commit contains tests or features, using prefixes such as:
+  - `test: ...` for commits adding or updating tests
+  - `feat: ...` for commits adding new features
