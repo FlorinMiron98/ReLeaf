@@ -28,8 +28,9 @@
    - [Manual Testing](https://github.com/FlorinMiron98/ReLeaf/blob/main/testing.md#manual-testing)
    - [Automated Testing](https://github.com/FlorinMiron98/ReLeaf/blob/main/testing.md#automated-testing)
    - [Bugs](https://github.com/FlorinMiron98/ReLeaf/blob/main/testing.md#bugs)
-7. Deployment
-8. [Credits](#credits)
+7. [Deployment](#deployment)
+   - [Project Deployment on AWS Elastic Beanstalk](#project-deployment-on-aws-elastic-beanstalk)
+9. [Credits](#credits)
    - [Content](#content)
    - [Media](#media)
    - [Code](#code)
@@ -54,6 +55,97 @@
 4. **JavaScript** - It is used to handle user interactions, manipulate the DOM, and manage application logic.
 5. **Django** - A high-level Python web framework that promotes rapid development and clean, pragmatic design. It handles the backend, including URL routing, data modeling, and server-side logic. More about Django on the [official website](https://www.djangoproject.com/)
 6. **Vitest** - A fast and lightweight testing framework built for modern JavaScript projects. It is used to implement test-driven development (TDD). More about Vitest on the [official website](https://vitest.dev/)
+## Deployment
+### Project Deployment on [AWS Elastic Beanstalk](https://aws.amazon.com/)
+#### BEFORE DEPLOYMENT: Project Setup (Local Machine)
+1. Create a Virtual Environment
+   ```
+   python -m venv venv
+   source venv/bin/activate  # Windows: venv\Scripts\activate
+   ```
+2. Install Dependencies
+   ```
+   pip install psycopg2-binary python-dotenv stripe pillow requests
+   ```
+3. Generate `requirements.txt`
+   ```
+   python -m pip freeze > requirements.txt
+   ```
+4. Update `settings.py`
+   ```python
+   import os
+
+   from pathlib import Path
+   from dotenv import load_dotenv
+   
+   load_dotenv()
+   
+   POSTGRESQL_USER = os.getenv('POSTGRESQL_USER')
+   POSTGRESQL_PASSWORD = os.getenv('POSTGRESQL_PASSWORD')
+
+   SECRET_KEY = os.getenv('SECRET_KEY')
+
+   DEBUG = os.getenv('IS_DEVELOPMENT', True)
+   
+   ALLOWED_HOSTS = [
+       os.getenv('APP_HOST', '127.0.0.1')
+   ]
+
+   STATIC_ROOT = BASE_DIR / 'staticfiles'
+   STATIC_URL = 'static/'
+   
+   STATICFILES_DIRS = [
+       BASE_DIR / "static",
+   ]
+   
+   DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+   MEDIA_ROOT = BASE_DIR / 'uploads'
+   MEDIA_URL = '/files/'
+   
+   STRIPE_PUBLIC_KEY = 'pk_test_51Rdxa5PJmeWIVQBAL6v4TrkSeP51ZWr3PZ9ilKQvwmORcDuRdmJgnWlzWdKnU5wiThq8GyTQCPc3xafVG2lhxfJ300UyGkcoGC'
+   STRIPE_PRIVATE_KEY = os.getenv('STRIPE_PRIVATE_KEY')
+   ```
+5. Collect static files locally
+   ```
+   python manage.py collectstatic
+   ```
+#### ZIP THE PROJECT FOR DEPLOYMENT
+   ```
+   your-project-root/
+      ├── core/
+      ├── donations/
+      ├── blog/
+      ├── accounts/
+      ├── manage.py
+      ├── re_leaf/
+      │   └── settings.py
+      ├── templates/
+      ├── staticfiles/     
+      ├── requirements.txt
+      └── .ebextensions/  
+   ```
+#### DEPLOY TO AWS ELASTIC BEANSTALK
+1.Go to AWS Console
+   - Navigate to **Elastic Beanstalk** > **Your Environment**
+   - Click **Upload and Deploy**
+   - Select your `re_leaf.zip` file
+   - Click **Deploy**
+2. Try to run the environment. Copy the APP_HOST link displayed in the error
+3. Set Environment Variables in EB Console
+   - Go to **Elastic Beanstalk** > **Configuration** > **Software** > **Edit**
+4. Add:
+   ```
+   IS_DEVELOPMENT=False
+   SECRET_KEY=your-secret-key
+   APP_HOST=your-app-host-link
+   POSTGRESQL_USER=your_db_user
+   POSTGRESQL_PASSWORD=your_db_password
+   STRIPE_PRIVATE_KEY=your-stripe-private-key
+   ```
+5. Visit Your Live Site
+   - Go to **Environment** and click the Domain link
+
+### Database Deployment on AWS RDS (PostgreSQL)
 ## Credits
 ### Content
 - [ChatGPT](https://chatgpt.com/) - Used to create content for:
