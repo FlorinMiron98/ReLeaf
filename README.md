@@ -22,12 +22,12 @@
    - [Payment Confirmation Page](https://github.com/FlorinMiron98/ReLeaf/blob/main/features.md#payment-confirmation-page)
 4. [Technologies Used](#technologies-used)
 5. [Data Schema](https://github.com/FlorinMiron98/ReLeaf/blob/main/data-schema.md)
-6. Testing
-   - Validator Testing
-   - Performance, Accessibility and Best Practices Testing
-   - Manual Testing
-   - Automated Testing
-   - Bugs
+6. [Testing](https://github.com/FlorinMiron98/ReLeaf/blob/main/testing.md)
+   - [Validator Testing](https://github.com/FlorinMiron98/ReLeaf/blob/main/testing.md#validator-testing)
+   - [Performance, Accessibility and Best Practices Testing](https://github.com/FlorinMiron98/ReLeaf/blob/main/testing.md#performance-accessibility-and-best-practices-testing)
+   - [Manual Testing](https://github.com/FlorinMiron98/ReLeaf/blob/main/testing.md#manual-testing)
+   - [Automated Testing](https://github.com/FlorinMiron98/ReLeaf/blob/main/testing.md#automated-testing)
+   - [Bugs](https://github.com/FlorinMiron98/ReLeaf/blob/main/testing.md#bugs)
 7. Deployment
 8. [Credits](#credits)
    - [Content](#content)
