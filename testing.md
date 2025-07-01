@@ -5,7 +5,7 @@
 2. [Performance, Accessibility and Best Practices Testing](#performance-accessibility-and-best-practices-testing)
 3. [Manual Testing](#manual-testing)
 4. [Automated Testing](#automated-testing)
-5. Bugs
+5. [Bugs](#bugs)
 
 ## Validator Testing
 1. [W3C Markup Validator](https://validator.w3.org/)
@@ -167,3 +167,10 @@ The following tables outlines the results of manual testing conducted based on u
 - Commit messages clearly indicate whether the commit contains tests or features, using prefixes such as:
   - `test: ...` for commits adding or updating tests
   - `feat: ...` for commits adding new features
+
+## Bugs
+
+![HTTPS](https://github.com/user-attachments/assets/1e567bbb-ec61-4981-a91f-be322834a0d8)
+
+A browser warning appears stating that the Cross-Origin-Opener-Policy header was ignored because the site is served over HTTP from an untrustworthy origin; this is due to the AWS deployment not using HTTPS, which requires a paid setup—using localhost during development avoids the warning.
+
