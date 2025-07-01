@@ -47,6 +47,17 @@
      **Notes**:
      When validating the login page HTML using the W3C Markup Validator, the following error is commonly reported. This is related to Django’s default form rendering:
      - An empty `action` attribute means the form submits to the current URL. While this is standard and works correctly across browsers and Django itself, the W3C validator flags it as invalid because the `action` attribute must be non-empty according to the HTML specification.
+    
+   - Payment Confirmation Page
+
+     ![Payment confirm page](https://github.com/user-attachments/assets/1b449a15-d9f0-418b-8c1f-85b5a93de751)
+
+2. [W3C Styles Validator](https://jigsaw.w3.org/css-validator/)
+   The result for all CSS files checking is "Congratulations! No Error Found."
+
+   ![Core](https://github.com/user-attachments/assets/130740f2-5b39-439f-bc4e-47c554f4b21f)
+
+
 
 
 
