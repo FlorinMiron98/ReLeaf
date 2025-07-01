@@ -144,8 +144,65 @@
    ```
 5. Visit Your Live Site
    - Go to **Environment** and click the Domain link
-
 ### Database Deployment on AWS RDS (PostgreSQL)
+1. Create the RDS PostgreSQL Database
+
+In the AWS Management Console:
+- Go to **RDS** > **Databases** > **Create database**
+Choose:
+- **Engine**: PostgreSQL
+- **Template**: Production or Free Tier (for dev)
+Set:
+- **DB Instance Identifier**: django-releaf
+- **Master Username/Password**: Choose and store securely
+- **Database Name**: postgres (default for PostgreSQL)
+Configure storage and availability settings as needed
+
+2. Configure RDS Security Group Access
+
+To allow your Django app to connect to the database:
+- Go to **RDS** > **Your DB** > **Connectivity & security**
+- Under VPC security groups, click to edit
+- Allow inbound rules:
+   - **Type**: PostgreSQL
+   - **Port**: 5432
+
+3. Obtain Your RDS Endpoint
+From the RDS console, copy the endpoint (hostname), which looks like:
+`django-releaf.cfm82oqq4qqg.eu-north-1.rds.amazonaws.com`
+
+4. Configure Django to Use the RDS Database
+In your `settings.py`:
+   ```
+   import os
+
+   POSTGRESQL_USER = os.getenv('POSTGRESQL_USER')
+   POSTGRESQL_PASSWORD = os.getenv('POSTGRESQL_PASSWORD')
+   
+   DATABASES = {
+       'default': {
+           'ENGINE': 'django.db.backends.postgresql',
+           'NAME': 'postgres',
+           'USER': POSTGRESQL_USER,
+           'PASSWORD': POSTGRESQL_PASSWORD,
+           'HOST': 'django-releaf.cfm82oqq4qqg.eu-north-1.rds.amazonaws.com',
+           'PORT': '5432'
+       }
+   }
+   ```
+
+5. Make migrations
+- `python manage.py makemigrations`
+- `python manage.py migrate`
+
+6. Add Environment Variables to Elastic Beanstalk
+In the AWS Console:
+   - Go to **Elastic Beanstalk** > **Your Environment** > **Configuration** > **Software** > **Edit**
+   - Add the following under Environment properties:
+     ```
+      POSTGRESQL_USER=your_db_username
+      POSTGRESQL_PASSWORD=your_db_password
+     ```
 ## Credits
 ### Content
 - [ChatGPT](https://chatgpt.com/) - Used to create content for:
