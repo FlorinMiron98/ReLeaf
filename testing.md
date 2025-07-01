@@ -1,5 +1,5 @@
 # Testing
-## [Main README.md] file
+## [Main README.md file](https://github.com/FlorinMiron98/ReLeaf/blob/main/README.md)
 ## Table of Contents
 1. [Validator Testing](#validator-testing)
 2. [Performance, Accessibility and Best Practices Testing](#performance-accessibility-and-best-practices-testing)
