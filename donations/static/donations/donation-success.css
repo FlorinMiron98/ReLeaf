@@ -15,3 +15,12 @@
 #donation-success-header .return-to-homepage-btn:hover {
   background-color: var(--color-secondary-light);
 }
+
+/* ============================================ */
+/* Media Queries */
+/* ============================================ */
+@media only screen and (max-width: 768px) {
+  #donation-success-header .navbar {
+    background-color: var(--color-primary);
+  }
+}

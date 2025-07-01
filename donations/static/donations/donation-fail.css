@@ -11,3 +11,12 @@
 #donation-fail-header .return-to-donations-btn:hover {
   background-color: var(--color-secondary-light);
 }
+
+/* ============================================ */
+/* Media Queries */
+/* ============================================ */
+@media only screen and (max-width: 768px) {
+  #donation-fail-header .navbar {
+    background-color: var(--color-primary);
+  }
+}
