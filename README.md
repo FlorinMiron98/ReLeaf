@@ -4,6 +4,8 @@
 
 This is a donation website dedicated to supporting tree-planting initiatives. Users can register or log in to make donations, contribute to environmental causes, and engage with the community by leaving comments on blog posts. The platform promotes sustainability and encourages users to take an active role in protecting the planet.
 
+## [Live Website](https://re-leaf-a6d5eec7dd3a.herokuapp.com/)
+
 ## Table of Contents
 1. [UX](#ux)
    - [Project Goals](#project-goals)
