@@ -2,6 +2,7 @@
 
 ![homepage](https://github.com/user-attachments/assets/a14d5acf-59fc-46ae-978f-fe1c8abe2a92)
 
+This is a donation website dedicated to supporting tree-planting initiatives. Users can register or log in to make donations, contribute to environmental causes, and engage with the community by leaving comments on blog posts. The platform promotes sustainability and encourages users to take an active role in protecting the planet.
 
 ## Table of Contents
 1. [UX](#ux)
